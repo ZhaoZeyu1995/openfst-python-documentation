@@ -1,9 +1,8 @@
-Template for the Read the Docs tutorial
+Openfst-Python Documentation for Automatic Speech Recognition Course INFR 11033 Labs
 =======================================
 
-This GitHub template includes fictional Python library
-with some basic Sphinx docs.
+This repo contains the files for building the documentation for openfst-python.
 
-Read the tutorial here:
+There is an `official documentation <https://www.openfst.org/twiki/bin/view/FST/PythonExtension>`_ for openfst-python actually, but it may not be very suitable and sufficient for the students in our labs, and that's why we have a separate documentation here as a complement. 
 
-https://docs.readthedocs.io/en/stable/tutorial/
+To view the webpage, please go to the `documentation webpage <https://openfst-python-documentation.readthedocs.io/en/latest/#>`_.
