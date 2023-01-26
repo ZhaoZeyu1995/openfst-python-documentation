@@ -6,29 +6,35 @@ Usage
 Installation
 ------------
 
-To use Lumache, first install it using pip:
+To use openfst-python, first install it using pip:
 
 .. code-block:: console
 
-   (.venv) $ pip install lumache
+   (.venv) $ pip install openfst-python
 
 Creating recipes
 ----------------
 
-To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
+To compute the composition,
+you can use the ``openfst_python.compose()`` function:
 
-.. autofunction:: lumache.get_random_ingredients
+.. autofunction:: openfst_python.compose
 
-The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
-will raise an exception.
+This is fst creation function
 
-.. autoexception:: lumache.InvalidKindError
+.. autoclass:: openfst_python.Fst
+
+This is mutable fst add arc
+
+.. autofunction:: openfst_python.pywrapfst._MutableFst.add_arc
+
+.. autoclass:: openfst_python.pywrapfst._MutableFst
+   :members:
+
 
 For example:
 
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
+>>> import openfst_python as fst
+>>> fst.compose()
+['The composition result']
 
