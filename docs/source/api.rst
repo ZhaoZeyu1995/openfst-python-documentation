@@ -3,6 +3,7 @@ API
 
 .. currentmodule:: openfst_python
 
-.. autosummary::
+.. autosummary:: pywrapfst._MutableFst
 
-   pywrapfst._MutableFst
+.. autoclass:: pywrapfst.SymbolTable
+   :members:

@@ -23,7 +23,7 @@ Contents
 
 There are mainly two parts in this documentation.
 
-The first part :doc:`tutorial` contains most of the frequently used functions and methods in our labs, just in case you are not that familiar with these or you think the official documentation is not that sufficient for you.
+The first part :doc:`tutorial` contains most of the frequently used functions and methods, selected by ourselves, in our labs, just in case you are not that familiar with these or you think the official documentation is not that sufficient for you.
 
 The second part :doc:`api` lists almost all of the functions, classes (including their methods and attributes), which can be also be viewed by the :python:`help()` function.
 

@@ -27,19 +27,25 @@ Lab1
    For Lab1, please refer to :doc:`lab1`.
 
 
-There are three classes in lab1. 
+There are three essential classes in lab1.
 
-To compute the composition,
-you can use the ``openfst_python.compose()`` function:
+.. currentmodule:: openfst_python
 
-.. autofunction:: openfst_python.compose
+.. autosummary::
+   pywrapfst.SymbolTable
+   pywrapfst._MutableFst
+   pywrapfst.Arc
 
-This is an autoclass.
 
-.. autoclass:: openfst_python.Fst
+First, let's have a look at how to create a SymbolTable.
 
-This is mutable fst add arc
+>>> # Here is an example of instantiating a SymbolTable
+>>> import openfst_python as fst
+>>> st = fst.SymbolTable()
 
-.. autofunction:: openfst_python.pywrapfst._MutableFst.add_arc
+You will probably use two main methods of the class :python:`SymbolTable`.
+
+.. autoclass:: pywrapfst.SymbolTable
+   :members: add_symbol, find
 
 
