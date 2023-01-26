@@ -1,7 +1,8 @@
 API
 ===
 
-.. autosummary::
-   :toctree: generated
+.. currentmodule:: openfst_python
 
-   openfst_python
+.. autosummary::
+
+   pywrapfst._MutableFst
