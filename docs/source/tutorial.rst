@@ -126,7 +126,6 @@ Arc
 The last class is :python:`fst.Arc`.
 
 .. autoclass:: pywrapfst.Arc
-   :special-members: __init__
 
 Let's see a simple example.
 
