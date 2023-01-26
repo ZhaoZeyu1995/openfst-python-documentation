@@ -36,7 +36,7 @@ This is an autoclass.
    :members:
 
 
-For example:
+Here is an example of python codes:
 
 >>> import openfst_python as fst
 >>> fst.compose()
