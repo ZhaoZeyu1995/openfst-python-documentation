@@ -6,12 +6,11 @@ There are three essential classes in lab1.
 .. note::
    Please go to the `github repo <https://github.com/ZhaoZeyu1995/asr_labs>`_ to view the jupyter notebook file for our labs.
 
-.. currentmodule:: openfst_python
 
 .. autosummary::
-   pywrapfst.SymbolTable
-   pywrapfst._MutableFst
-   pywrapfst.Arc
+   openfst_python.pywrapfst.SymbolTable
+   openfst_python.pywrapfst._MutableFst
+   openfst_python.pywrapfst.Arc
 
 
 SymbolTable
@@ -25,7 +24,7 @@ First, let's have a look at how to create a :python:`SymbolTable`.
 
 You will use two main methods of the class :python:`SymbolTable`.
 
-.. autoclass:: pywrapfst.SymbolTable
+.. autoclass:: openfst_python.pywrapfst.SymbolTable
    :members: add_symbol, find
 
 
@@ -64,7 +63,7 @@ To create an FST object, we use :python:`fst.Fst()`, but the instantiated object
 
 Here are some frequently used methods about this class in our labs.
 
-.. autoclass:: pywrapfst._MutableFst
+.. autoclass:: openfst_python.pywrapfst._MutableFst
    :members: add_state, add_arc, set_start, set_final, set_input_symbols, set_output_symbols
 
 Here are some basic exmaples.
@@ -99,7 +98,7 @@ Arc
 
 The last class is :python:`fst.Arc`.
 
-.. autoclass:: pywrapfst.Arc
+.. autoclass:: openfst_python.pywrapfst.Arc
 
 Let's see a simple example.
 
