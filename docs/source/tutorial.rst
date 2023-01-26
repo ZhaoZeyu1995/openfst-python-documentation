@@ -11,7 +11,7 @@ Installation
   :class: highlight
 
 
-To use openfst-python, first install it with :shell:`pip`:
+To use openfst-python, we can simply install it with :shell:`pip`:
 
 .. code-block:: console
 
@@ -40,7 +40,10 @@ There are three essential classes in lab1.
    pywrapfst.Arc
 
 
-First, let's have a look at how to create a SymbolTable.
+SymbolTable
+***********
+
+First, let's have a look at how to create a :python:`SymbolTable`.
 
 >>> # Here is an example of instantiating a SymbolTable
 >>> import openfst_python as fst
@@ -52,7 +55,7 @@ You will use two main methods of the class :python:`SymbolTable`.
    :members: add_symbol, find
 
 
-For example,
+For example, to add a new symbol to a symbol table,
 
 >>> idx = st.add_symbol('a')
 >>> idx
@@ -70,4 +73,28 @@ To find the index corresponding to a label, we may use the method :python:`Symbo
 >>> idx
 >>> -1 # the label 'c' is not in the symbol table, so it returns :python:`NO_SYMBOL` value, and here it is -1 by default.
 
+To simply recap, the :python:`SymbolTable` is just a mapping between the symbol (:python:`string`) and the index (:python:`int`).
 
+
+
+Fst
+**********
+
+Now, let's create an FST object.
+
+>>> f = fst.Fst()
+>>> type(f)
+>>> <class 'pywrapfst._MutableFst'>
+
+To create an FST object, we use :python:`fst.Fst()`, but the instantiated object :python:`f` is an instance of the class :python:`pywrapfst._MutableFst`.
+
+Here are some frequently used methods about this class in our labs.
+
+.. autoclass:: pywrapfst._MutableFst
+   :members: add_state, add_arc, set_start, set_final
+
+
+Arc
+**********
+
+Here is the content about :python:`Arc`.
