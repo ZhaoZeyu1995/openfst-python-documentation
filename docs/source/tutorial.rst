@@ -18,10 +18,16 @@ To use openfst-python, first install it with :shell:`pip`:
    $ pip install openfst-python
 
 
-Useful Functions and Classes in Lab1
+Lab1
 ----------------
 
-We may put all the content here!
+.. note::
+   We may put all the content here!
+   Or, we may also put it in another file, if you think it could be too long to put all of the content here, which is up to you.
+   For Lab1, please refer to :doc:`lab1`.
+
+
+There are three classes in lab1. 
 
 To compute the composition,
 you can use the ``openfst_python.compose()`` function:
@@ -37,5 +43,3 @@ This is mutable fst add arc
 .. autofunction:: openfst_python.pywrapfst._MutableFst.add_arc
 
 
-Or, we may also put it in another file as below, if you think it could be too long to put all of the content here, which is up to you.
-For Lab1, please refer to :doc:`lab1`.

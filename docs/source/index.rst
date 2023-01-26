@@ -23,10 +23,10 @@ Contents
 
 There are mainly two parts in this documentation.
 
-The first part :doc:`tutorial` contains most of the frequently used functions and methods in our labs, just in case you are not that familiar with these and you may think the official documentation is not that sufficient for you.
-The second part :doc:`api` lists almost all of the functions, classes (including their methods and attributes), which can be also be found by the :python:`help()` function.
+The first part :doc:`tutorial` contains most of the frequently used functions and methods in our labs, just in case you are not that familiar with these or you think the official documentation is not that sufficient for you.
 
->>> help(object) # object represents an abitary object here in openfst_python
+The second part :doc:`api` lists almost all of the functions, classes (including their methods and attributes), which can be also be viewed by the :python:`help()` function.
+
 
 .. toctree::
    :maxdepth: 2
