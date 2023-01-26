@@ -9,6 +9,10 @@ This documentation is designed as a complement for the official one, as you may 
 
    This project is under active development.
 
+.. note::
+
+   Please have a look at :doc:`sample` first for some syntax examples if you would like to edit this documentation.
+
 
 Contents
 --------
