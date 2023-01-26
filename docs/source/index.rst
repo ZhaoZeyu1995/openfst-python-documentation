@@ -37,4 +37,5 @@ The second part :doc:`api` lists almost all of the functions, classes (including
    :maxdepth: 2
 
    tutorial
+   lab1
    api
