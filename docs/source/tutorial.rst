@@ -124,7 +124,7 @@ Arc
 
 The last class is :python:`fst.Arc`.
 
-.. autoclass:: openfst_python.lpywrapfst.Arc
+.. autoclass:: openfst_python.pywrapfst.Arc
 
 Let's see a simple example.
 
