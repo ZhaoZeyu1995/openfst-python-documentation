@@ -62,6 +62,7 @@ For example,
 >>> 1 # this time it returns 1, as 'b' is the second label we add into the symbol table
 
 To find the index corresponding to a label, we may use the method :python:`SymbolTable.find()`
+
 >>> idx = st.find('a')
 >>> idx
 >>> 0 # the label 'a' is in the symbol table, so it returns its index, and here it is 0.
