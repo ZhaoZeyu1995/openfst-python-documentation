@@ -30,7 +30,7 @@ Lab1
 There are three essential classes in lab1.
 
 .. note::
-   Please go to the `<github repo <https://github.com/ZhaoZeyu1995/asr_labs>`_ to view the jupyter notebook file for our labs.
+   Please go to the `github repo <https://github.com/ZhaoZeyu1995/asr_labs>`_ to view the jupyter notebook file for our labs.
 
 .. currentmodule:: openfst_python
 
