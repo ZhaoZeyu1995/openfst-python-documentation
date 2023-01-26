@@ -14,8 +14,12 @@ Here is also an example of code-block.
 
    $ pip install openfst-python
 
-Creating recipes
+
+Useful Functions and Classes in Our Labs
 ----------------
+
+
+For Lab1, please refer to :doc:`lab1`.
 
 To compute the composition,
 you can use the ``openfst_python.compose()`` function:
