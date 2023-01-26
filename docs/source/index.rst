@@ -20,5 +20,5 @@ Here is an example of toctree, which is like table of content.
 
 .. toctree::
 
-   usage
+   tutorial
    api
