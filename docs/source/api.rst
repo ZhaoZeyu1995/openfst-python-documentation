@@ -1,7 +1,5 @@
 API
-===
+====
 
-.. currentmodule:: openfst_python
-
-.. autoclass:: pywrapfst.SymbolTable
+.. autoclass:: openfst_python.pywrapfst.SymbolTable
    :members:
