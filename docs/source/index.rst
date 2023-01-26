@@ -13,8 +13,7 @@ Below is an example of Note!
 
    This project is under active development.
 
-For basic usage, please refer to :ref:`official documentation`_.
-.. _official documentation: https://www.openfst.org/twiki/bin/view/FST/PythonExtension
+For basic usage, please refer to the `official documentation <https://www.openfst.org/twiki/bin/view/FST/PythonExtension/>`_.
 
 This documentation is designed as a complementation for the official one, as you may find that the latter is not that comprehensive.
 
