@@ -22,19 +22,13 @@ you can use the ``openfst_python.compose()`` function:
 
 .. autofunction:: openfst_python.compose
 
-This is fst creation function
+This is an autoclass.
 
 .. autoclass:: openfst_python.Fst
 
 This is mutable fst add arc
 
 .. autofunction:: openfst_python.pywrapfst._MutableFst.add_arc
-
-This is an autoclass.
-
-.. autoclass:: openfst_python.pywrapfst._MutableFst
-   :members:
-
 
 Here is an example of python codes:
 
