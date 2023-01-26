@@ -6,9 +6,12 @@ Tutorial
 Installation
 ------------
 
-To use openfst-python, first install it using pip:
+.. role:: shell(code)
+  :language: shell
+  :class: highlight
 
-Here is also an example of code-block.
+
+To use openfst-python, first install it with :shell:`pip`:
 
 .. code-block:: console
 
@@ -36,11 +39,3 @@ This is mutable fst add arc
 
 Or, we may also put it in another file as below, if you think it could be too long to put all of the content here, which is up to you.
 For Lab1, please refer to :doc:`lab1`.
-
-
-Here is an example of python codes:
-
->>> import openfst_python as fst
->>> fst.compose()
-['The composition result']
-

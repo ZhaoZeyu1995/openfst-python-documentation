@@ -1,21 +1,14 @@
 Welcome to openfst-python documentation!
 ===================================
 
-There are basically two different types of links available.
+For basic usage, please refer to the `official documentation <https://www.openfst.org/twiki/bin/view/FST/PythonExtension>`_.
 
-Here is an example of the link to another file named :doc:`tutorial`.
-
-Here is an example of the link to a specific section named :ref:`installation`.
-
-Below is an example of Note!
+This documentation is designed as a complement for the official one, as you may find that the latter is not that comprehensive.
 
 .. note::
 
    This project is under active development.
 
-For basic usage, please refer to the `official documentation <https://www.openfst.org/twiki/bin/view/FST/PythonExtension>`_.
-
-This documentation is designed as a complementation for the official one, as you may find that the latter is not that comprehensive.
 
 Contents
 --------
@@ -23,8 +16,6 @@ Contents
 .. role:: python(code)
   :language: python
   :class: highlight
-
-Here is an example of toctree, which is like table of content.
 
 There are mainly two parts in this documentation.
 
@@ -39,3 +30,4 @@ The second part :doc:`api` lists almost all of the functions, classes (including
    tutorial
    lab1
    api
+   sample
