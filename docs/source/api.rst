@@ -3,8 +3,17 @@ API
 
 .. currentmodule:: openfst_python
 
-.. autosummary:: pywrapfst._MutableFst
-
 .. autoclass:: pywrapfst.SymbolTable
    :members:
    :inherited-members:
+   :special-members:
+
+.. autoclass:: pywrapfst._MutableFst
+   :members:
+   :inherited-members:
+   :special-members:
+
+.. autoclass:: pywrapfst.Arc
+   :members:
+   :inherited-members:
+   :special-members:

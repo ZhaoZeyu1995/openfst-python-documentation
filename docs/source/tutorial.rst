@@ -91,10 +91,49 @@ To create an FST object, we use :python:`fst.Fst()`, but the instantiated object
 Here are some frequently used methods about this class in our labs.
 
 .. autoclass:: pywrapfst._MutableFst
-   :members: add_state, add_arc, set_start, set_final
+   :members: add_state, add_arc, set_start, set_final, set_input_symbols, set_output_symbols
 
+Here are some basic exmaples.
+
+To add a new state in the Fst,
+
+>>> new_state = f.add_state()
+>>> new_state
+>>> 0 # add_state() returns the state index (:python:`int`) for the state (new_state) we just added.
+
+To set the state we just added (new_state) as the start state for the Fst,
+
+>>> f.set_start(new_state)
+
+Let's add another state and set it as the final state for the Fst,
+
+>>> another_new_state = f.add_state()
+>>> f.set_final(another_new_state)
+
+To set a :python:`SymbolTable`, say input_symbols, as the input symbol table for our Fst,
+
+>>> f.set_input_symbols(input_symbols)
+
+To set a :python:`SymbolTable`, say output_symbols, as the output symbol table for our Fst,
+
+>>> f.set_output_symbols(output_symbols)
+
+There is still a method :python:`add_arc()` left and it will be mentioned in the following section together with :python:`fst.Arc`.
 
 Arc
 **********
 
-Here is the content about :python:`Arc`.
+The last class is :python:`fst.Arc`.
+
+.. autoclass:: pywrapfst.Arc
+   :special-members: __init__
+
+Let's see a simple example.
+
+>>> import openfst_python as fst
+>>> f = fst.Fst() # instantiate an fst._MutableFst object
+>>> # Let's add two states into f.
+>>> state1 = f.add_state() 
+>>> state2 = f.add_state()
+>>> arc = fst.Arc(0, 1, None, state2) # We instantiate an arc here with 0 as the input index, 1 as the output index, None as the weight (we will talk more about weight in the next lab), and state2 as the 
+>>> f.add_arc(state1, fst.Arc(0, 0, None, state2))
