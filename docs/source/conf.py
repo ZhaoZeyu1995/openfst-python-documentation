@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'ASR openfst-python docs'
+copyright = '2023, CSTR'
+author = 'Zeyu Zhao, Peter Bell'
 
 release = '0.1'
 version = '0.1.0'

@@ -21,6 +21,10 @@ This documentation is designed as a complementation for the official one, as you
 Contents
 --------
 
+.. role:: python(code)
+  :language: python
+  :class: highlight
+
 Here is an example of toctree, which is like table of content.
 
 There are mainly two parts in this documentation.
