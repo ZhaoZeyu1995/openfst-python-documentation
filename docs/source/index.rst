@@ -19,6 +19,7 @@ Contents
 Here is an example of toctree, which is like table of content.
 
 .. toctree::
+   :maxdepth: 2
 
    tutorial
    api
