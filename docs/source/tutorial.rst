@@ -135,5 +135,9 @@ Let's see a simple example.
 >>> # Let's add two states into f.
 >>> state1 = f.add_state() 
 >>> state2 = f.add_state()
->>> arc = fst.Arc(0, 1, None, state2) # We instantiate an arc here with 0 as the input index, 1 as the output index, None as the weight (we will talk more about weight in the next lab), and state2 as the 
->>> f.add_arc(state1, fst.Arc(0, 0, None, state2))
+>>> arc = fst.Arc(0, 1, None, state2) 
+>>> # We instantiate an arc here with 0 as the input index, 
+>>> # 1 as the output index, 
+>>> # None as the weight (we will talk more about weight in the next lab), 
+>>> # and state2 as the next state.
+>>> f.add_arc(state1, arc) # Add the arc to our fst from state1
