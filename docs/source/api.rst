@@ -5,4 +5,3 @@ API
 
 .. autoclass:: pywrapfst.SymbolTable
    :members:
-   :inherited-members:
