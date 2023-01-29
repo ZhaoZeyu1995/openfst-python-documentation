@@ -1,7 +1,7 @@
 Welcome to Edinburgh's openfst-python documentation
 ===================================
 
-This documentation is intended for students working on our `ASR Labs <https://github.com/ZhaoZeyu1995/asr_labs>`_.  We previously received feedback that `official documentation <https://www.openfst.org/twiki/bin/view/FST/PythonExtension>`_, so this is intended as a complement to it. 
+This documentation is intended for students working on our `ASR Labs <https://github.com/ZhaoZeyu1995/asr_labs>`_.  We previously received feedback that `official documentation the <https://www.openfst.org/twiki/bin/view/FST/PythonExtension>`_ can be hard to follow, so this is intended as a complement to it. 
 
 Documentation of specific functions has been automatically derived from the code, but we have added our own explanations and examples.
 
@@ -21,11 +21,11 @@ Contents
   :language: python
   :class: highlight
 
-Youn can use this documentation in two ways.
+You can use this documentation in two ways.
 
-The first part :doc:`tutorial` contains technical documentation of most of the frequently used functions and methods used in each lab session.
+The :doc:`tutorial` section contains technical documentation of most of the frequently used functions and methods used in each lab session.
 
-The second part :doc:`api` lists almost all of the functions and classes (including their methods and attributes) used in openfst-python.   The contents can be also be viewed in Python by using the :python:`help()` function.
+The :doc:`api` section lists almost all of the functions and classes (including their methods and attributes) used in openfst-python.   The contents can be also be viewed in Python by using the :python:`help()` function.
 
 
 .. toctree::
