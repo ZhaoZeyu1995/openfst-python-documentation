@@ -1,15 +1,15 @@
-Welcome to openfst-python documentation!
+Welcome to Edinburgh's openfst-python documentation
 ===================================
 
-For basic usage, please refer to the `official documentation <https://www.openfst.org/twiki/bin/view/FST/PythonExtension>`_.
+This documentation is intended for students working on our `ASR Labs <https://github.com/ZhaoZeyu1995/asr_labs>`_.  We previously received feedback that `official documentation <https://www.openfst.org/twiki/bin/view/FST/PythonExtension>`_, so this is intended as a complement to it. 
 
-This documentation is designed as a complement for the official one, as you may find that the latter is not that comprehensive.
-
-.. note::
-
-   This project is under active development.
+Documentation of specific functions has been automatically derived from the code, but we have added our own explanations and examples.
 
 .. note::
+
+   The documentation is currently under active development.
+
+.. COMMENT note::
 
    Please have a look at :doc:`sample` first for some syntax examples if you would like to edit this documentation.
 
@@ -21,11 +21,11 @@ Contents
   :language: python
   :class: highlight
 
-There are mainly two parts in this documentation.
+Youn can use this documentation in two ways.
 
-The first part :doc:`tutorial` contains most of the frequently used functions and methods, selected by ourselves, in our labs, just in case you are not that familiar with these or you think the official documentation is not that sufficient for you.
+The first part :doc:`tutorial` contains technical documentation of most of the frequently used functions and methods used in each lab session.
 
-The second part :doc:`api` lists almost all of the functions, classes (including their methods and attributes), which can be also be viewed by the :python:`help()` function.
+The second part :doc:`api` lists almost all of the functions and classes (including their methods and attributes) used in openfst-python.   The contents can be also be viewed in Python by using the :python:`help()` function.
 
 
 .. toctree::
