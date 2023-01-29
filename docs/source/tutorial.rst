@@ -6,7 +6,7 @@ Tutorial
 Installation
 ------------
 
-**Not needed if you have followed the setup instructions for our ASR Labs**
+*Not needed if you have followed the setup instructions for our ASR Labs*
 
 .. role:: shell(code)
   :language: shell
