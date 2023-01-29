@@ -20,7 +20,7 @@ To use openfst-python, we can simply install it with :shell:`pip`:
    $ pip install openfst-python
 
 
-Lab-specific documentation
+Lab-specific documentation: an overview
 ----------------
 
 Lab 1: Building HMMs with OpenFst
