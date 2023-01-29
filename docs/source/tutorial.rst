@@ -32,7 +32,7 @@ See the full documentation at :doc:`lab1`.
    Please go to the `github repo <https://github.com/ZhaoZeyu1995/asr_labs/blob/master/asr_lab1.ipynb>`_ to view the jupyter notebook file for this lab.
 
 
-There are three classes used in Lab 1: :python:`_MutableFst`, the main class for an FST "mutable" (ie. that can be dynamically modified in the code); :python:`Arc`, which is the arc object used to connect states in an FST; and :python:`SymbolTable`, which maps input or output strings to the integer IDs used as arc labels by OpenFst.
+There are three classes used in Lab 1: :python:`_MutableFst`, the main class for an "mutable" FST (ie. one that can be dynamically modified in the code); :python:`Arc`, which is the arc object used to connect states in an FST; and :python:`SymbolTable`, which maps input or output strings to the integer IDs used as arc labels by OpenFst.
 
 .. autosummary::
    openfst_python.pywrapfst.SymbolTable
