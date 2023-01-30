@@ -32,7 +32,8 @@ To add a new symbol to a symbol table,
 
 >>> idx = st.add_symbol('a')
 >>> idx
->>> 0 # as you can see above, the method, add_symbol, returns the index corresponding to the label 'a', because this is the first label we add into the symbol table.
+>>> 0 # as you can see above, the method, add_symbol, returns the index corresponding to the 
+>>>   # label 'a', because this is the first label we add into the symbol table.
 >>> idx = st.add_symbol('b')
 >>> idx
 >>> 1 # this time it returns 1, as 'b' is the second label we add into the symbol table
@@ -44,7 +45,7 @@ To find the index corresponding to a label already in the symbol table, we can u
 >>> 0 # the label 'a' is in the symbol table, so it returns its index, and here it is 0.
 >>> idx = st.find('c')
 >>> idx
->>> -1 # the label 'c' is not in the symbol table, so it returns :python:`NO_SYMBOL` value, which here is -1 by default.
+>>> -1 # the label 'c' is not in the symbol table, so it returns NO_SYMBOL value, which here is -1 by default.
 
 To recap, the :python:`SymbolTable` is just a mapping between the text symbol (:python:`string`) and the internal index used by OpenFst (:python:`int`).
 
@@ -72,7 +73,7 @@ To add a new state in the Fst,
 
 >>> new_state = f.add_state()
 >>> new_state
->>> 0 # add_state() returns the state index (:python:`int`) for the state (new_state) we just added.
+>>> 0 # add_state() returns the state index (int) for the state (new_state) we just added.
 
 To set the state we just added (new_state) as the start state for the Fst,
 
