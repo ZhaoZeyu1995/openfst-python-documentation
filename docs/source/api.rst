@@ -1,4 +1,4 @@
-API
+API reference
 ====
 
 .. autoclass:: openfst_python.pywrapfst.SymbolTable
