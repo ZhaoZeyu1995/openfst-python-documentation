@@ -12,3 +12,7 @@ API reference
 .. autoclass:: openfst_python.pywrapfst._MutableFst
    :members:
    :inherited-members:
+
+.. autoclass:: openfst_python.pywrapfst.Weight
+   :members:
+   :inherited-members:

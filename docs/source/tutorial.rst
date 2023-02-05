@@ -40,6 +40,21 @@ There are three classes used in Lab 1: :python:`_MutableFst`, the main class for
    openfst_python.pywrapfst.Arc
 
 
+Lab 2: FST with Weights
+^^^^^^^^^^^^^^^
+
+See the full documentation at :doc:`lab2`.
+
+.. note::
+   Please go to the `github repo <https://github.com/ZhaoZeyu1995/asr_labs/blob/master/asr_lab2.ipynb>`_ to view the jupyter notebook file for this lab.
+
+The essential class for this lab is :python:`Weight`, and all weights are instances of this class.
+
+.. autosummary::
+   openfst_python.pywrapfst.Weight
+
+
+
 
 
 
