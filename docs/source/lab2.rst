@@ -28,7 +28,7 @@ To create an FST object with weights, we use :python:`fst.Fst()`, and pass a str
 
 >>> s1 = f.add_state()
 >>> s2 = f.add_state()
->>> w = fst.Weight('log', 10)
+>>> w = fst.Weight('log', 10) # Note 'log' is the weight type and 10 is the value.
 >>> f.add_arc(s1, fst.Arc(0, 0, w, s2)
 
 In the above example, we first add two states in the FST, then instantiate a weight object :python:`w = fst.Weight('log', 10)`, and add an arc from :python:`s1` to :python:`s2` with :python:`w`.
@@ -42,12 +42,18 @@ Traverse a WFST and Compute Weights
 Below are the useful functions for traversing a WFST.
 
 .. autoclass:: openfst_python.pywrapfst._MutableFst
-   :members: final, arcs, start
+   :members: final, arcs, start, states
 
 >>> # Suppose f is a WFST that we have already created by openfst_python.
->>> start_state = f.start() # get the start state of an FST
->>> for arc in f.arcs(start_state): # use Fst.arcs(state) to obtain an iterator of the arcs departing from the state
->>>     print(arc.ilabel, arc.olabel, arc.weight, arc.nextstate) # print out the input label, the output label, the weight and the next state of the arc.
->>>     weight = float(arc.weight) # please remember to transform it to float before you do any calculations
->>> for state in f.states(): # use Fst.states() to get an iterator of all the states in the FST
->>>     print(state) # print out the state 
+>>> start_state = f.start() 
+>>> # get the start state of an FST
+>>> for arc in f.arcs(start_state): 
+>>> # use Fst.arcs(state) to obtain an iterator of the arcs departing from the state
+>>>     print(arc.ilabel, arc.olabel, arc.weight, arc.nextstate) 
+>>>     # print out the input label, the output label, the weight and the next state of the arc.
+>>>     weight = float(arc.weight) 
+>>>     # please remember to transform it to float before you do any calculations
+>>> for state in f.states(): 
+>>> # use Fst.states() to get an iterator of all the states in the FST
+>>>     print(state) 
+>>>     # print out the state 
