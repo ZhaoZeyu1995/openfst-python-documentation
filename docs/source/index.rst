@@ -33,6 +33,7 @@ The :doc:`api` section lists almost all of the functions and classes (including 
 
    tutorial
    lab1
+   lab2
    api
    
 .. COMMENT

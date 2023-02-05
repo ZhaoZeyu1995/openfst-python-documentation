@@ -33,7 +33,7 @@ To create an FST object with weights, we use :python:`fst.Fst()`, and pass a str
 
 In the above example, we first add two states in the FST, then instantiate a weight object :python:`w = fst.Weight('log', 10)`, and add an arc from :python:`s1` to :python:`s2` with :python:`w`.
 You might wonder why we need to instantiate a :python:`Weight` object but not simply passing a :python:`float` value to :python:`fst.Acr()`.
-The reason is that the weights in a WFST must be the elements from a semiring, so wit the class :python:`Weight`, the addition and multiplication operations are defined.
+The reason is that the weights in a WFST must be the elements from a semiring, so with the class :python:`Weight`, the addition and multiplication operations are defined.
 Thus, as you will see below, when you compute the weight along a path in an FST, you have to transform the :python:`Weight` to :python:`float` by :python:`float()`.
 
 Traverse a WFST and Compute Weights
