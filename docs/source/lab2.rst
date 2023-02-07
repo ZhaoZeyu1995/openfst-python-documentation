@@ -1,7 +1,8 @@
-Lab 2: FST with Weight 
+Lab 2: Computing HMM probabilities with FST weights 
 ====
 
-In Lab2, we will learn how to assign weights to transitions (or arcs) of an FST by applying the class :python:`Weight`.
+In Lab2, we will learn how to assign weights to transitions (or arcs) of an FST by applying the class :python:`Weight` and how to traverse the arcs and states or a previously-constructed FST using iterators.
+
 To compute the total weight for a path in an FST, a simple example is provided to show you how to do it with the APIs in :python:`openfst_python`.
 
 .. note::
@@ -11,6 +12,33 @@ To compute the total weight for a path in an FST, a simple example is provided t
 .. autosummary::
    openfst_python.pywrapfst.Weight
 
+Traversing a WFST
+**********
+
+Below are the useful functions for traversing a WFST.
+
+.. autoclass:: openfst_python.pywrapfst._MutableFst
+   :members: final, arcs, start, states
+
+In this example, we print the arcs for each state in the FST
+
+>>> # Iterate over all the states in the FST
+>>> for state in f.states():
+>>>     
+>>>     # iterate over all arcs leaving this state    
+>>>     for arc in f.arcs(state):
+>>>          print(state, arc.ilabel, arc.olabel, arc.weight, arc.nextstate)
+
+In this example, we traverse all the arcs of an FST in a depth-first manner.  **Warning: this code will run forever if an FST has self-loops of cycles!**
+
+>>> def traverse_arcs(state):
+>>>     """Traverse every arc leaving a particular state
+>>>     """
+>>>     for arc in f.arcs(state):
+>>>         print(state, arc.ilabel, arc.olabel, arc.weight, arc.nextstate)
+>>>         
+>>> s = f.start()
+>>> traverse_arcs(s)
 
 Weighted FST
 ***********
@@ -36,13 +64,6 @@ You might wonder why we need to instantiate a :python:`Weight` object but not si
 The reason is that the weights in a WFST must be the elements from a semiring, so with the class :python:`Weight`, the addition and multiplication operations are defined.
 Thus, as you will see below, when you compute the weight along a path in an FST, you have to transform the :python:`Weight` to :python:`float` by :python:`float()`.
 
-Traverse a WFST and Compute Weights
-**********
-
-Below are the useful functions for traversing a WFST.
-
-.. autoclass:: openfst_python.pywrapfst._MutableFst
-   :members: final, arcs, start, states
 
 >>> # Suppose f is a WFST that we have already created by openfst_python.
 >>> start_state = f.start() 
