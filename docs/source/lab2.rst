@@ -43,10 +43,11 @@ In this example, we traverse all the arcs of an FST in a depth-first manner.  **
 Weighted FST
 ***********
 
-Now, let's create an FST object with :python:`Weight`.
+For the purposes of these labs, you can think of the weights on the arcs of your FSTs as being equivalent to negative log probabilities.  That is, *w = -log p*.  We'll use the "log semi-ring", which (roughly) means that summing weights is equivalent to multiplying probabilities.  Let's create an FST object with :python:`Weight`.
 
 .. autoclass:: openfst_python.pywrapfst.Weight
-
+   :members:
+   
 >>> import openfst_python as fst
 >>> f = fst.Fst('log') # Note the string 'log'
 >>> type(f)
