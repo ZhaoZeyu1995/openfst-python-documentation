@@ -43,13 +43,15 @@ In this example, we traverse all the arcs of an FST in a depth-first manner.  **
 Weighted FST
 ***********
 
-For the purposes of these labs, you can think of the weights on the arcs of your FSTs as being equivalent to negative log probabilities.  That is, *w = -log p*.  We'll use the "log semi-ring", which (roughly) means that summing weights is equivalent to multiplying probabilities.  Let's create an FST object with :python:`Weight`.
+For the purposes of these labs, you can think of the weights on the arcs of your FSTs as being equivalent to negative log probabilities.  That is, *w = -log p*.  We'll use the "log semi-ring", which (roughly) means that summing weights is equivalent to multiplying probabilities.  
 
 .. autoclass:: openfst_python.pywrapfst.Weight
-   :members:
+   :members: One, Zero
+   
+Let's create an FST object with :python:`Weight`.
    
 >>> import openfst_python as fst
->>> f = fst.Fst('log') # Note the string 'log'
+>>> f = fst.Fst('log') # Note the 'log' means we're using the log semi-ring
 >>> type(f)
 >>> <class 'pywrapfst._MutableFst'>
 
@@ -62,19 +64,21 @@ To create an FST object with weights, we use :python:`fst.Fst()`, and pass a str
 
 In the above example, we first add two states in the FST, then instantiate a weight object :python:`w = fst.Weight('log', 10)`, and add an arc from :python:`s1` to :python:`s2` with :python:`w`.
 You might wonder why we need to instantiate a :python:`Weight` object but not simply passing a :python:`float` value to :python:`fst.Acr()`.
-The reason is that the weights in a WFST must be the elements from a semiring, so with the class :python:`Weight`, the addition and multiplication operations are defined.
-Thus, as you will see below, when you compute the weight along a path in an FST, you have to transform the :python:`Weight` to :python:`float` by :python:`float()`.
+The reason is that the weights in a WFST must be objects from a specific semi-ring, so with the class :python:`Weight`, the addition and multiplication operations are defined correctly.
+Thus, as you will see below, if you want to directly compute the weight along a path in an FST, you have to transform the :python:`Weight` to :python:`float` by :python:`float()`.
 
 
->>> # Suppose f is a WFST that we have already created by openfst_python.
+>>> # Suppose f is a WFST that we have already created
 >>> start_state = f.start() 
 >>> # get the start state of an FST
 >>> for arc in f.arcs(start_state): 
+>>> 
 >>> # use Fst.arcs(state) to obtain an iterator of the arcs departing from the state
 >>>     print(arc.ilabel, arc.olabel, arc.weight, arc.nextstate) 
 >>>     # print out the input label, the output label, the weight and the next state of the arc.
 >>>     weight = float(arc.weight) 
->>>     # please remember to transform it to float before you do any calculations
+>>>     # transform it to float before you do any calculations
+>>> 
 >>> for state in f.states(): 
 >>> # use Fst.states() to get an iterator of all the states in the FST
 >>>     print(state) 
