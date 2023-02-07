@@ -40,7 +40,7 @@ In this example, we traverse all the arcs of an FST in a depth-first manner.  **
 >>> s = f.start()
 >>> traverse_arcs(s)
 
-Weighted FST
+FST Weights
 ***********
 
 For the purposes of these labs, you can think of the weights on the arcs of your FSTs as being equivalent to negative log probabilities.  That is, *w = -log p*.  We'll use the "log semi-ring", which (roughly) means that summing weights is equivalent to multiplying probabilities.  
@@ -65,8 +65,25 @@ To create an FST object with weights, we use :python:`fst.Fst()`, and pass a str
 In the above example, we first add two states in the FST, then instantiate a weight object :python:`w = fst.Weight('log', 10)`, and add an arc from :python:`s1` to :python:`s2` with :python:`w`.
 You might wonder why we need to instantiate a :python:`Weight` object but not simply passing a :python:`float` value to :python:`fst.Acr()`.
 The reason is that the weights in a WFST must be objects from a specific semi-ring, so with the class :python:`Weight`, the addition and multiplication operations are defined correctly.
-Thus, as you will see below, if you want to directly compute the weight along a path in an FST, you have to transform the :python:`Weight` to :python:`float` by :python:`float()`.
 
+OpenFst defines two functions python:`Weight.Zero(), Weight.One()` that return special weights that correspond probabilities of zero and one respectively.  Like other weights, they are stored internally as negative log probabilities.  The toolkit also defines functions python:`fst.plus(), Weight.times()` whose behaviour depends on the semi-ring you are using, but roughly corresponds to the normal operations of summing and multiplying probabilities respectively.  However, these function operate directly on the weights in negative log-probability form.
+
+Here are some examples:
+
+>>> # Initialise some weights using the log semi-ring
+>>> w = fst.Weight('log', 0.693)  # weight corresponding to probability of 0.5
+>>> w_zero = fst.Weight.Zero('log') # weight corresponding to probability of 0
+>>> w_one = fst.Weight.One('log') # weight corresponding to probability of 1
+>>>
+>>> fst.plus(w_zero, w_zero)
+>>> <log Weight Infinity>   # 0 + 0 = 0 (=Infinity in negative log domain)
+>>>
+>>> fst.times(w_zero, w_zero) 
+>>> <log Weight Infinity>   # 0 x 0 = 0 (=Infinity in negative log domain)
+
+.. Including summing two 0.5 probabilities, also multiplying zero and one
+
+If you want to directly compute the weight along a path in an FST without using pre-defined operations, you have to transform the :python:`Weight` to :python:`float` by :python:`float()`.
 
 >>> # Suppose f is a WFST that we have already created
 >>> start_state = f.start() 
