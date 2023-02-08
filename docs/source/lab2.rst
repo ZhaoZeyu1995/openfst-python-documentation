@@ -71,7 +71,7 @@ OpenFst defines two functions python:`Weight.Zero(), Weight.One()` that return s
 Here are some examples:
 
 >>> # Initialise some weights using the log semi-ring
->>> w = fst.Weight('log', 0.693)  # weight corresponding to probability of 0.5
+>>> w_half = fst.Weight('log', 0.693)  # weight corresponding to probability of 0.5
 >>> w_zero = fst.Weight.Zero('log') # weight corresponding to probability of 0
 >>> w_one = fst.Weight.One('log') # weight corresponding to probability of 1
 >>>
@@ -80,23 +80,28 @@ Here are some examples:
 >>>
 >>> fst.times(w_zero, w_zero) 
 >>> <log Weight Infinity>   # 0 x 0 = 0 (=Infinity in negative log domain)
-
-.. Including summing two 0.5 probabilities, also multiplying zero and one
-
-If you want to directly compute the weight along a path in an FST without using pre-defined operations, you have to transform the :python:`Weight` to :python:`float` by :python:`float()`.
-
->>> # Suppose f is a WFST that we have already created
->>> start_state = f.start() 
->>> # get the start state of an FST
->>> for arc in f.arcs(start_state): 
 >>> 
->>> # use Fst.arcs(state) to obtain an iterator of the arcs departing from the state
->>>     print(arc.ilabel, arc.olabel, arc.weight, arc.nextstate) 
->>>     # print out the input label, the output label, the weight and the next state of the arc.
->>>     weight = float(arc.weight) 
->>>     # transform it to float before you do any calculations
+>>> fst.times(w_one, w_zero)
+>>> <log Weight Infinity>   # 1 x 0 = 0 (=Infinity in negative log domain)
 >>> 
->>> for state in f.states(): 
->>> # use Fst.states() to get an iterator of all the states in the FST
->>>     print(state) 
->>>     # print out the state 
+>>> fst.plus(w_one, w_zero) 
+>>> <log Weight 0>   # 1 + 0 = 1 (=0 in negative log domain)
+>>>
+>>> fst.times(w_one, w_one)
+>>> <log Weight 0>   # 1 x 1 = 1 (=0 in negative log domain)
+>>> 
+>>> fst.plus(w_half, w_half)
+>>> <log Weight 0>   # 0.5 x 0.5 = 1 (=0 in negative log domain)
+>>>                  # Summation uses the formula -log(exp(-w1) + exp(w2)) in log semi-ring
+>>>                  # (it won't be exactly this value due to numerical issues)
+
+However, if you prefer to directly compute the weight along a path in an FST without using pre-defined operations, this is possible.  You have to transform the :python:`Weight` to :python:`float` by :python:`float()`.
+
+>>> # Suppose we wish to sum the weights on two arcs, arc1 and arc2
+>>> # This is equivalent to multiplying the corresponding probabilities
+>>> 
+>>> # Using FST operations
+>>> w_sum = fst.times(arc1.weight, arc2.weight)
+>>>
+>>> # Using direct maths operations to get the same result
+>>> sum = float(arc1.weight) + float(arc.weight)
