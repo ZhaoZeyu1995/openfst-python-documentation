@@ -66,7 +66,7 @@ In the above example, we first add two states in the FST, then instantiate a wei
 You might wonder why we need to instantiate a :python:`Weight` object but not simply passing a :python:`float` value to :python:`fst.Acr()`.
 The reason is that the weights in a WFST must be objects from a specific semi-ring, so with the class :python:`Weight`, the addition and multiplication operations are defined correctly.
 
-OpenFst defines two functions python:`Weight.Zero(), Weight.One()` that return special weights that correspond probabilities of zero and one respectively.  Like other weights, they are stored internally as negative log probabilities.  The toolkit also defines functions python:`fst.plus(), Weight.times()` whose behaviour depends on the semi-ring you are using, but roughly corresponds to the normal operations of summing and multiplying probabilities respectively.  However, these function operate directly on the weights in negative log-probability form.
+OpenFst defines two functions :python:`Weight.Zero(), Weight.One()` that return special weights that correspond probabilities of zero and one respectively.  Like other weights, they are stored internally as negative log probabilities.  The toolkit also defines functions python:`fst.plus(), Weight.times()` whose behaviour depends on the semi-ring you are using, but roughly corresponds to the normal operations of summing and multiplying probabilities respectively.  However, these function operate directly on the weights in negative log-probability form.
 
 Here are some examples:
 
