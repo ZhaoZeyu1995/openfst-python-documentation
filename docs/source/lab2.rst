@@ -101,7 +101,7 @@ However, if you prefer to directly compute the weight along a path in an FST wit
 >>> # This is equivalent to multiplying the corresponding probabilities
 >>> 
 >>> # Using FST operations
->>> w_sum = fst.times(arc1.weight, arc2.weight)
+>>> weight_sum = fst.times(arc1.weight, arc2.weight)
 >>>
 >>> # Using direct maths operations to get the same result
->>> sum = float(arc1.weight) + float(arc.weight)
+>>> float_sum = float(arc1.weight) + float(arc.weight)
