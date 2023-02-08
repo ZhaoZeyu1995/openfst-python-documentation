@@ -1,7 +1,7 @@
 Lab 2: Computing HMM probabilities with FST weights 
 ====
 
-In Lab2, we will learn how to assign weights to transitions (or arcs) of an FST by applying the class :python:`Weight` and how to traverse the arcs and states or a previously-constructed FST using iterators.
+In Lab 2, we will learn how to assign weights to transitions (or arcs) of an FST by applying the class :python:`Weight` and how to traverse the arcs and states or a previously-constructed FST using iterators.
 
 To compute the total weight for a path in an FST, a simple example is provided to show you how to do it with the APIs in :python:`openfst_python`.
 
@@ -29,7 +29,7 @@ In this example, we print the arcs for each state in the FST
 >>>     for arc in f.arcs(state):
 >>>          print(state, arc.ilabel, arc.olabel, arc.weight, arc.nextstate)
 
-In this example, we traverse all the arcs of an FST in a depth-first manner.  **Warning: this code will run forever if an FST has self-loops of cycles!**
+In this example, we traverse all the arcs of an FST in a depth-first manner.  **Warning: this code will run forever if an FST has self-loops or cycles!**
 
 >>> def traverse_arcs(state):
 >>>     """Traverse every arc leaving a particular state
