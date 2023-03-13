@@ -53,9 +53,27 @@ The essential class for this lab is :python:`Weight`, and all weights are instan
 .. autosummary::
    openfst_python.pywrapfst.Weight
 
+Labs 3 and 4: Viterbi decoding
+^^^^^^^^^^^^^^^
 
+There is no additional documentation specific to either of these labs.
 
+Labs 5: WFST operations
+^^^^^^^^^^^^^^^
 
+See the full documentation at :doc:`lab5`.
 
+.. note::
+   Please go to the `github repo <https://github.com/ZhaoZeyu1995/asr_labs/blob/master/asr_lab5.ipynb>`_ to view the jupyter notebook file for this lab.
 
+This lab introduces several WFST operations.  You'll see how these can be used to implement solutions to the problem of matching phoneme sequences to entries in a lexicon, and also incorporating a grammar.  We use the following operations:
+
+.. autosummary::
+   openfst_python.pywrapfst.determinize
+   openfst_python.pywrapfst.compose
+   openfst_python.pywrapfst.shortestpath
+   openfst_python.pywrapfst.minimize
+   openfst_python.pywrapfst.project
+   openfst_python.pywrapfst.rmepsilon
+   openfst_python.pywrapfst.arcsort
 
