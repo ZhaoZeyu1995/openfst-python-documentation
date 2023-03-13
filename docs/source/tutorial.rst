@@ -72,8 +72,8 @@ This lab introduces several WFST operations.  You'll see how these can be used t
    openfst_python.pywrapfst.determinize
    openfst_python.pywrapfst.compose
    openfst_python.pywrapfst.shortestpath
-   openfst_python.pywrapfst.minimize
-   openfst_python.pywrapfst.project
-   openfst_python.pywrapfst.rmepsilon
-   openfst_python.pywrapfst.arcsort
+   openfst_python.pywrapfst._MutableFst.minimize
+   openfst_python.pywrapfst._MutableFst.project
+   openfst_python.pywrapfst._MutableFst.rmepsilon
+   openfst_python.pywrapfst._MutableFst.arcsort
 
