@@ -1,5 +1,5 @@
 Labs 5: WFST operations
-===
+====
 
 This lab introduces several WFST operations.  You'll see how these can be used to implement solutions to the problem of matching phoneme sequences to entries in a lexicon, and also incorporating a grammar.  We use the following operations:
 
@@ -18,7 +18,7 @@ We use the following operations in this lab.  See the :doc:`api` for complete do
    openfst_python.pywrapfst.arcsort
 
 Detailed description of operations
-***
+****
 
 .. autofunction::
    openfst_python.pywrapfst.determinize
