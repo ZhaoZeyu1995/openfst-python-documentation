@@ -12,10 +12,10 @@ We use the following operations in this lab.  See the :doc:`api` for complete do
    openfst_python.pywrapfst.determinize
    openfst_python.pywrapfst.compose
    openfst_python.pywrapfst.shortestpath
-   openfst_python.pywrapfst.minimize
-   openfst_python.pywrapfst.project
-   openfst_python.pywrapfst.rmepsilon
-   openfst_python.pywrapfst.arcsort
+   openfst_python.pywrapfst._MutableFst.minimize
+   openfst_python.pywrapfst._MutableFstproject
+   openfst_python.pywrapfst._MutableFstrmepsilon
+   openfst_python.pywrapfst._MutableFst.arcsort
 
 Detailed description of operations
 ****
@@ -24,7 +24,7 @@ Detailed description of operations
    openfst_python.pywrapfst.determinize
    openfst_python.pywrapfst.compose
    openfst_python.pywrapfst.shortestpath
-   openfst_python.pywrapfst.minimize
-   openfst_python.pywrapfst.project
-   openfst_python.pywrapfst.rmepsilon
-   openfst_python.pywrapfst.arcsort
+   openfst_python.pywrapfst._MutableFst.minimize
+   openfst_python.pywrapfst._MutableFst.project
+   openfst_python.pywrapfst._MutableFst.rmepsilon
+   openfst_python.pywrapfst._MutableFst.arcsort
