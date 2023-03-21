@@ -20,7 +20,7 @@ We use the following operations in this lab.  See the :doc:`api` for complete do
 Detailed description of operations
 ****
 
-.. autofunction:: openfst_python.pywrapfst.determinize
+.. autodoc:: openfst_python.pywrapfst.determinize
    .. openfst_python.pywrapfst.compose
    .. openfst_python.pywrapfst.shortestpath
    .. openfst_python.pywrapfst._MutableFst.minimize
