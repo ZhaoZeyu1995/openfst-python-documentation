@@ -20,6 +20,9 @@ We use the following operations in this lab.  See the :doc:`api` for complete do
 Detailed description of operations
 ****
 
+.. automodule:: openfst_python.pywrapfst
+   :members: determinize, compose, shortestpath, _MutableFst.minimize, _MutableFst.project, _MutableFst.rmepsilon, _MutableFst.arcsort
+
 .. autodoc:: openfst_python.pywrapfst.determinize
    .. openfst_python.pywrapfst.compose
    .. openfst_python.pywrapfst.shortestpath
