@@ -23,10 +23,4 @@ Detailed description of operations
 .. automodule:: openfst_python.pywrapfst
    :members: determinize, compose, shortestpath, _MutableFst.minimize, _MutableFst.project, _MutableFst.rmepsilon, _MutableFst.arcsort
 
-.. autodoc:: openfst_python.pywrapfst.determinize
-   .. openfst_python.pywrapfst.compose
-   .. openfst_python.pywrapfst.shortestpath
-   .. openfst_python.pywrapfst._MutableFst.minimize
-   .. openfst_python.pywrapfst._MutableFst.project
-   .. openfst_python.pywrapfst._MutableFst.rmepsilon
-   .. openfst_python.pywrapfst._MutableFst.arcsort
+.. automodule:: openfst_python.pywrapfst.determinize
