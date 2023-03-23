@@ -20,6 +20,8 @@ We use the following operations in this lab.  See the :doc:`api` for complete do
 Detailed description of operations
 ****
 
+*The way in which the documentation is auto-generated adds additional information before the function descriptions themselves that we cannot remove – feel free to ignore this!*
+
 .. automodule:: openfst_python.pywrapfst
    :members: determinize, compose, shortestpath, 
 
